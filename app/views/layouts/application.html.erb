@@ -7,9 +7,38 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   </head>
 
   <body>
+
+    <div class="navbar">
+      <ul class="header-menu">
+        <%= link_to '<li>Welcome</li>'.html_safe, 'welcome' %>
+        <%= link_to '<li>Portfolio</li>'.html_safe, 'portfolio' %>
+        <%= link_to '<li>Blog</li>'.html_safe, 'https://medium.com/about-codecademy' %>
+        <%= link_to '<li>About</li>'.html_safe, 'about' %>
+        <%= link_to '<li>Contact</li>'.html_safe, 'contact'%>
+        <li class="name">Matt Healy</li>
+      </ul>
+	</div>
+
     <%= yield %>
+
+	<div class="footer">
+		<div class="contact">
+			<div class="social">
+				<%= link_to image_tag('https://portfolio-rails-2633.herokuapp.com/assets/github-edc899c60c7b3afd0c458e648197f578.svg'), 'https://www.githuv.com'%>
+				<%= link_to image_tag('https://portfolio-rails-2633.herokuapp.com/assets/linkedin-be22eb82414f9f637debbe2d64c301cb.svg'), 'https://www.linkedin.com'%>
+				<%= link_to image_tag('https://portfolio-rails-2633.herokuapp.com/assets/twitter-8c095eaee58362a46d56e3f07b50b23b.svg'), 'https://www.twitter.com' %>
+			</div>
+		</br>
+		</br>
+		</br>
+		<p>©2020 Prateek Arora</p>
+		</div>
+
   </body>
 </html>
